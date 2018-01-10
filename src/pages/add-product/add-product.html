@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Agregar un pedido
+    </ion-title>
+    <ion-buttons right>
+      <button ion-button (click)="saveProduct()">
+        <ion-icon name="md-send"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list no-lines>
+    <ion-item>
+      <ion-input type="text" placeholder="Nombre de Producto" [(ngModel)]="product.name">
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-datetime displayFormat="DD/MM/YYYY" placeholder="Fecha" [(ngModel)]="date">
+      </ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Descripción breve</ion-label>
+      <ion-textarea placeholder="Descripción breve" [(ngModel)]="product.description">
+      </ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-input type="tel" placeholder="Cantidad" [(ngModel)]="product.quantity">
+      </ion-input>
+    </ion-item>
+
+    <!-- **** FOTO **** -->
+    <ion-item>
+      <img *ngIf="!thumbnail" width="70" height="60" src="assets/imgs/camera.png" (click)="addPhoto()">
+      <img *ngIf="thumbnail" width="70" height="70" [src]="thumbnail" class="img-add">
+      <button ion-button *ngIf="thumbnail" (click)="removePhoto()">Borrar imagen</button>
+    </ion-item>
+  </ion-list>
+</ion-content>

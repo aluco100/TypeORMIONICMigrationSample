@@ -1,14 +1,22 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Listado de Pedidos
     </ion-title>
   </ion-navbar>
 </ion-header>
-
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-list>
+    <ion-item *ngIf="isDisconnected == true" style="background:red;">Sin conexion.</ion-item>
+    <ion-item *ngFor="let product of products ">
+      {{product.name}}
+      <ion-icon *ngIf="product.status == 1" name="md-sync"></ion-icon>
+      <ion-icon *ngIf="product.status == 2" name="ios-checkmark-circle-outline"></ion-icon>
+    </ion-item>
+  </ion-list>
+  <ion-fab bottom right>
+  <button ion-fab color="primary" (click)="addProduct()">
+    <ion-icon name="md-add" class="nav-icons"> </ion-icon>
+  </button>
+</ion-fab>
 </ion-content>
