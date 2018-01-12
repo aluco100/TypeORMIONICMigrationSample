@@ -12,6 +12,7 @@ import {ProductRefactoring1515586923234} from "../migrations/1515586923234-Produ
 import {ProductRefactoring1515688342666} from "../migrations/1515688342666-ProductRefactoring";
 import {ProductRefactoring1515692942255} from "../migrations/1515692942255-ProductRefactoring";
 import {ProductRefactoring1515695789696} from "../migrations/1515695789696-ProductRefactoring";
+import {ProductRefactoring1515761659288} from "../migrations/1515761659288-ProductRefactoring";
 
 @Injectable()
 export class DatabaseService {
@@ -57,7 +58,8 @@ export class DatabaseService {
         Product
       ],
       migrations: [ProductRefactoring1515586923234,ProductRefactoring1515688342666,
-                  ProductRefactoring1515692942255,ProductRefactoring1515695789696]
+                  ProductRefactoring1515692942255,ProductRefactoring1515695789696,
+                  ProductRefactoring1515761659288]
     });
     await connection.runMigrations();
     await connection.close();

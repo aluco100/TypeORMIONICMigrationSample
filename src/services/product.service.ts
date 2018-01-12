@@ -16,7 +16,7 @@ export class ProductService{
   sendProduct(product:Product):Promise<any>{
 
     let body: any = {
-      name: product.name,
+      name: product.title,
       timestamp: product.timestamp,
       description: product.description,
       quantity: product.quantity,
