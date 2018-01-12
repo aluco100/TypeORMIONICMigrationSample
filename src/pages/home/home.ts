@@ -50,7 +50,7 @@ export class HomePage implements NetworkProtocol,OnInit{
         this.loadProducts();
       });
     }).catch(error => {
-      console.log("ERROR in migration: "+ JSON.stringify(error));
+      console.log("ERROR in migration: "+ error);
       this.loadProducts();
     });
   }

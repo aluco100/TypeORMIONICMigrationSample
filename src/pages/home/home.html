@@ -9,7 +9,7 @@
   <ion-list>
     <ion-item *ngIf="isDisconnected == true" style="background:red;">Sin conexion.</ion-item>
     <ion-item *ngFor="let product of products ">
-      {{product.name}}
+      {{product.title}}
       <ion-icon *ngIf="product.status == 1" name="md-sync"></ion-icon>
       <ion-icon *ngIf="product.status == 2" name="ios-checkmark-circle-outline"></ion-icon>
     </ion-item>

@@ -6,7 +6,7 @@ export class Product{
   id: number;
 
   @Column("text")
-  name:string;
+  title:string;
 
   @Column("int")
   timestamp: number;
