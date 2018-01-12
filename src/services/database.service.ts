@@ -9,6 +9,9 @@ import { NetworkService } from "./network.service";
 import { ProductService } from "./product.service";
 import { ImageService } from "./image.service";
 import {ProductRefactoring1515586923234} from "../migrations/1515586923234-ProductRefactoring";
+import {ProductRefactoring1515688342666} from "../migrations/1515688342666-ProductRefactoring";
+import {ProductRefactoring1515692942255} from "../migrations/1515692942255-ProductRefactoring";
+import {ProductRefactoring1515695789696} from "../migrations/1515695789696-ProductRefactoring";
 
 @Injectable()
 export class DatabaseService {
@@ -53,7 +56,8 @@ export class DatabaseService {
       entities: [
         Product
       ],
-      migrations: [ProductRefactoring1515586923234]
+      migrations: [ProductRefactoring1515586923234,ProductRefactoring1515688342666,
+                  ProductRefactoring1515692942255,ProductRefactoring1515695789696]
     });
     await connection.runMigrations();
     await connection.close();

@@ -53,7 +53,7 @@
     "ngx-restangular": "^2.0.2",
     "rxjs": "5.5.2",
     "sw-toolbox": "3.6.0",
-    "typeorm": "^0.1.10",
+    "typeorm": "^0.1.11",
     "zone.js": "0.8.18"
   },
   "devDependencies": {
