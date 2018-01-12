@@ -82,7 +82,6 @@
     <plugin name="cordova-plugin-splashscreen" spec="~4.0.1" />
     <plugin name="cordova-plugin-ionic-webview" spec="^1.1.11" />
     <plugin name="cordova-sqlite-storage" spec="^2.2.0" />
-    <engine name="ios" spec="~4.5.4" />
     <plugin name="cordova.plugins.diagnostic" spec="^3.9.0" />
     <plugin name="cordova-plugin-camera" spec="^4.0.1" />
     <plugin name="cordova-plugin-file" spec="^6.0.1" />
@@ -92,4 +91,5 @@
         <variable name="GEOLOCATION_USAGE_DESCRIPTION" value="Se requiere de tu localizacion para subir productos" />
     </plugin>
     <plugin name="cordova-plugin-network-information" spec="^2.0.1" />
+    <engine name="ios" spec="~4.5.4" />
 </widget>
